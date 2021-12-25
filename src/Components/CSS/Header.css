@@ -1,0 +1,63 @@
+/* Header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-left > button{
+    border: none;
+    background-color: white;
+  }
+  
+  .header-left{
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-left > h2{
+    font-family: 'Cairo', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .header-logo{
+    height: 25px;
+    object-fit: contain;
+    margin-left: 10px;
+  }
+  
+  .header-input{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    border: 1px solid lightgray;
+  }
+  
+  .header-input > input{
+    flex: 1;
+    border: none;
+    padding: 9px 2px;
+  }
+  
+  .header-input-button{
+    width: 50px !important; /* to over-write the material-ui css */
+    background-color: #fafafa;
+    border-left: 1px solid lightgray;
+    color: black;
+  }
+  
+  .header-icons{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .header-icon{
+    margin-right: 10px;
+  }

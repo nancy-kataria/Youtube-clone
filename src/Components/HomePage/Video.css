@@ -1,0 +1,66 @@
+.recommendedVideos{
+    flex: 0.83;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    padding-bottom: 0;
+  }
+  
+  .recommended-Videos{ /* isCollapsed */
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px 40px;
+    padding-bottom: 0;
+  }
+  
+  .videoCard{
+    width: 278px;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+  
+  .video-Card{ /* isCollapsed */
+    width: 315px;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+  
+  .videoCard-thumbnail{
+    height: 160px;
+    width: 265px;
+  }
+  
+  .video-Card-thumbnail{ /* isCollapsed */
+    height: 185px;
+    width: 290px;
+  }
+  
+  .recommended-videos{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .video-info{
+    display: flex;
+    margin-top: 10px;
+    padding-right: 30px;
+  }
+  
+  .video-text{
+    margin-left: 15px;
+    color: black;
+  }
+  
+  .video-text > h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .video-text > p{
+    font-size: 14px;
+    color: #606060;
+  }
+  
+  .video-avatar{
+    height: 35px !important; /* to over-write the material-ui css */
+    width: 35px !important;
+  }

@@ -1,0 +1,54 @@
+.sidebar {
+  flex: 0.17;
+}
+
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 27px;
+  color: black;
+  text-decoration: none;
+}
+
+.sidebarRow-title {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebarRow:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.sidebarRow.selected {
+  background-color: lightgray;
+}
+
+.sidebar > hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-min {
+  /* isCollapsed */
+  flex: 0.1;
+}
+
+.sidebarMinRow {
+  /* isCollapsed */
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.sidebarMinRow:hover {
+  /* isCollapsed */
+  background-color: lightgray;
+  cursor: pointer;
+}

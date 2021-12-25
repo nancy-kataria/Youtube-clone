@@ -1,0 +1,169 @@
+.video-page{
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 1.3rem;
+}
+
+.video-section{
+    flex: 0.65;
+    padding-right: 1rem;
+}
+
+.video-section .video-image{
+    height: 530px;
+    width: 950px;
+}
+
+/* Video title  */
+
+.video-section .title{
+    padding-top: 15px;
+    padding-bottom: 12px;
+}
+
+.tags{
+    display: flex;
+}
+
+.video-section .title .tags > p{
+    padding-right: 6px;
+    font-size: 13px;
+}
+
+.video-section .title p{
+    color: #606060;
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.title-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-icons{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    color: #030303;
+}
+
+.video-icon{
+    padding-right: 0.4rem;
+    padding-left: 1rem;
+}
+
+.video-icons > h5{
+    font-weight: 600;
+}
+
+/* Channel Name and description */
+
+.channel-title {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-title .video-Avatar{
+    height: 44px !important;
+    width: 44px !important;
+}
+
+.channel-section{
+    display: flex;
+    align-items: center;
+}
+
+.channel-section .name{
+    padding-left: 1rem;
+}
+
+.channel-section .name > p{
+    color: #606060;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.description{
+    padding: 0.2rem 10rem 1.5rem 3.5rem;
+}
+
+/* Total comments and sort */
+
+.sort-comments{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 9px;
+}
+
+.sort-icon{
+    padding-right: 4px;
+    padding-left: 2rem;
+}
+
+/* Comment input */
+
+.comment-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textfield{
+    width: 100ch;
+}
+
+/* User Comments */
+
+.comment-section{
+    padding-top: 1rem;
+}
+
+.commentCard{
+    display: flex;
+    padding: 1rem 2rem 1rem 0;
+}
+
+.comment-section .commentCard .text{
+    padding-left: 1rem;
+}
+
+.commentCard .text > p{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Suggested Videos */
+
+.suggestion-section{
+    flex: 0.35;
+}
+
+.suggestion-videos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+.suggestion-videos > img{
+    height: 6rem;
+    width: 11rem;
+    padding-right: 6px;
+}
+
+.suggestion-videos > div > h5{
+    font-size: 13px;
+    padding-bottom: 9px;
+}
+
+.suggestion-videos > div > p{
+    color: #606060;
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 2px;
+}

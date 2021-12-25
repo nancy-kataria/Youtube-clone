@@ -1,0 +1,14 @@
+/* App page */
+
+.app-page{
+  display: flex;
+}
+
+a:-webkit-any-link {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+h1,h2,h3,h4,h5{
+  color: #030303;
+}
