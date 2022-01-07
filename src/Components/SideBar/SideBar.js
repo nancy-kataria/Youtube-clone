@@ -24,7 +24,7 @@ function SideBar({pathName}) {
 
   return (
     <div className="sidebar">
-      <Link to="/">
+      <Link to="/youtube-clone">
         <SidebarRow selected Icon={HomeIcon} title="Home" />
       </Link>
       <SidebarRow Icon={ExploreIcon} title="Explore" />

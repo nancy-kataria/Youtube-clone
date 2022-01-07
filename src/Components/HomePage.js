@@ -131,13 +131,13 @@ function HomePage() {
         <Routes>
           <Route path="/youtube-clone" element={<Home isCollapsed={isCollapsed} />} />
           <Route
-            path="/search/:searchTerm"
+            path="/youtube-clone/search/:searchTerm"
             element={
               <SearchPage isCollapsed={isCollapsed} pathName={pathName} />
             }
           />
           <Route
-            path="/video/:videoTerm"
+            path="/youtube-clone/video/:videoTerm"
             element={
               <VideoPage
                 videoImage={videoImage}
@@ -150,8 +150,8 @@ function HomePage() {
               />
             }
           />
-          <Route path='/playlist' element={<PlaylistPage />} />
-          <Route path='/fetch' element={<FetchTest />} />
+          <Route path='/youtube-clone/playlist' element={<PlaylistPage />} />
+          <Route path='/youtube-clone/fetch' element={<FetchTest />} />
         </Routes>
       </div>
     </div>

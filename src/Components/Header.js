@@ -55,7 +55,7 @@ function Header({ isCollapsed, setIsCollapsed }) {
         <button onClick={menuHandler}>
           <MenuIcon className="header-icons" />
         </button>
-        <Link to="/">
+        <Link to="/youtube-clone">
           <img
             className="header-logo"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
