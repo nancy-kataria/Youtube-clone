@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Youtube-clone/static/css/main.a9bb7a2e.chunk.css",
-    "main.js": "/Youtube-clone/static/js/main.ccc9437b.chunk.js",
-    "main.js.map": "/Youtube-clone/static/js/main.ccc9437b.chunk.js.map",
-    "runtime-main.js": "/Youtube-clone/static/js/runtime-main.118b29dc.js",
-    "runtime-main.js.map": "/Youtube-clone/static/js/runtime-main.118b29dc.js.map",
-    "static/js/2.1c00cddd.chunk.js": "/Youtube-clone/static/js/2.1c00cddd.chunk.js",
-    "static/js/2.1c00cddd.chunk.js.map": "/Youtube-clone/static/js/2.1c00cddd.chunk.js.map",
-    "static/js/3.9f152926.chunk.js": "/Youtube-clone/static/js/3.9f152926.chunk.js",
-    "static/js/3.9f152926.chunk.js.map": "/Youtube-clone/static/js/3.9f152926.chunk.js.map",
-    "index.html": "/Youtube-clone/index.html",
-    "static/css/main.a9bb7a2e.chunk.css.map": "/Youtube-clone/static/css/main.a9bb7a2e.chunk.css.map",
-    "static/js/2.1c00cddd.chunk.js.LICENSE.txt": "/Youtube-clone/static/js/2.1c00cddd.chunk.js.LICENSE.txt"
+    "main.css": "/youtube-clone/static/css/main.a9bb7a2e.chunk.css",
+    "main.js": "/youtube-clone/static/js/main.ccc9437b.chunk.js",
+    "main.js.map": "/youtube-clone/static/js/main.ccc9437b.chunk.js.map",
+    "runtime-main.js": "/youtube-clone/static/js/runtime-main.cd29370d.js",
+    "runtime-main.js.map": "/youtube-clone/static/js/runtime-main.cd29370d.js.map",
+    "static/js/2.1c00cddd.chunk.js": "/youtube-clone/static/js/2.1c00cddd.chunk.js",
+    "static/js/2.1c00cddd.chunk.js.map": "/youtube-clone/static/js/2.1c00cddd.chunk.js.map",
+    "static/js/3.9f152926.chunk.js": "/youtube-clone/static/js/3.9f152926.chunk.js",
+    "static/js/3.9f152926.chunk.js.map": "/youtube-clone/static/js/3.9f152926.chunk.js.map",
+    "index.html": "/youtube-clone/index.html",
+    "static/css/main.a9bb7a2e.chunk.css.map": "/youtube-clone/static/css/main.a9bb7a2e.chunk.css.map",
+    "static/js/2.1c00cddd.chunk.js.LICENSE.txt": "/youtube-clone/static/js/2.1c00cddd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.118b29dc.js",
+    "static/js/runtime-main.cd29370d.js",
     "static/js/2.1c00cddd.chunk.js",
     "static/css/main.a9bb7a2e.chunk.css",
     "static/js/main.ccc9437b.chunk.js"
