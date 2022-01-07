@@ -8,12 +8,20 @@ import CommentsSection from "./CommentsSection";
 import { Avatar, TextField } from "@material-ui/core";
 import SortSharpIcon from "@material-ui/icons/SortSharp";
 
-function VideoPage({ videoImage, channelTitle, description, title, tags }) {
+function VideoPage({
+  channelTitle,
+  description,
+  title,
+  tags,
+  videoId,
+  channelId,
+}) {
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    axios
+    const getSuggestedVideos = () => { // Suggestion Videos API
+      axios
       .get(
         "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=15&regionCode=IN&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
       )
@@ -23,10 +31,12 @@ function VideoPage({ videoImage, channelTitle, description, title, tags }) {
       .catch((err) => {
         console.log(err);
       });
+    }
 
-    axios
+    const getComments = () => { // Comments API
+      axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=20&order=relevance&textFormat=plainText&videoId=5HVoUNiSee8&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
+        `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=20&textFormat=plainText&videoId=${videoId}&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk`
       )
       .then((res) => {
         // console.log(res)
@@ -35,33 +45,56 @@ function VideoPage({ videoImage, channelTitle, description, title, tags }) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    }
+
+    getSuggestedVideos()
+    if(videoId){
+      getComments()
+    }
+  }, [videoId]);
 
   return (
     <div className="video-page">
       <div className="video-section">
-        <img className="video-image" src={videoImage} alt={channelTitle} />
+        <iframe
+          id="player"
+          type="text/html"
+          width="950"
+          height="530"
+          src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
+          frameBorder="0"
+          title="myFrame"
+        ></iframe>
         <TitleSection title={title} tags={tags} />
         <hr></hr>
-        <ChannelSection channelTitle={channelTitle} description={description} />
+        <ChannelSection channelTitle={channelTitle} channelId={channelId} />
         <div className="description">
           <p>{description.slice(0, 310)}</p>
         </div>
         <hr></hr>
         <div className="sort-comments">
-        <p>48,548 comments</p>
-        <SortSharpIcon className="sort-icon" />
-        <h5>SORT BY</h5>
+          <p>48,548 comments</p>
+          <SortSharpIcon className="sort-icon" />
+          <h5>SORT BY</h5>
         </div>
         <div className="comment-area">
-        <Avatar src='' />
-        <TextField className='textfield' id="standard-basic" label="Add a public comment" variant="standard" />
+          <Avatar src="" />
+          <TextField
+            className="textfield"
+            id="standard-basic"
+            label="Add a public comment"
+            variant="standard"
+          />
         </div>
         <div className="comment-section">
           {comments.map((comment) => (
             <CommentsSection
-              profileImage={comment.snippet.topLevelComment.snippet.authorProfileImageUrl}
-              authorName={comment.snippet.topLevelComment.snippet.authorDisplayName}
+              profileImage={
+                comment.snippet.topLevelComment.snippet.authorProfileImageUrl
+              }
+              authorName={
+                comment.snippet.topLevelComment.snippet.authorDisplayName
+              }
               text={comment.snippet.topLevelComment.snippet.textOriginal}
               likes={comment.snippet.likeCount}
               key={Math.random()}

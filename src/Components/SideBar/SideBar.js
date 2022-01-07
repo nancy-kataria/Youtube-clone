@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarRow from "./SidebarRow";
 import HomeIcon from "@material-ui/icons/HomeOutlined";
@@ -11,11 +11,20 @@ import WatchLaterIcon from "@material-ui/icons/WatchLaterOutlined";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMoreOutlined";
 import { Link } from "react-router-dom";
+import ExpandSidebar from "./ExpandSidebar";
 
-function SideBar() {
+function SideBar({pathName}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const expandMoreSideBarHandler = () => {
+    if (!isExpanded) {
+      setIsExpanded(true);
+    }
+  };
+
   return (
     <div className="sidebar">
-      <Link to='/'>
+      <Link to="/">
         <SidebarRow selected Icon={HomeIcon} title="Home" />
       </Link>
       <SidebarRow Icon={ExploreIcon} title="Explore" />
@@ -26,7 +35,11 @@ function SideBar() {
       <SidebarRow Icon={OndemandVideoIcon} title="Your Videos" />
       <SidebarRow Icon={WatchLaterIcon} title="Watch Later" />
       <SidebarRow Icon={ThumbUpAltIcon} title="Liked Videos" />
-      <SidebarRow Icon={ExpandMoreIcon} title="Show More" />
+      {!isExpanded ? 
+      <button onClick={expandMoreSideBarHandler}>
+        <SidebarRow Icon={ExpandMoreIcon} title="Show More" />
+      </button> : ''}
+      {!isExpanded ? "" : <ExpandSidebar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />}
       <hr />
     </div>
   );

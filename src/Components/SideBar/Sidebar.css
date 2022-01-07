@@ -1,5 +1,11 @@
 .sidebar {
   flex: 0.17;
+  /* z-index: 100; */
+}
+
+.sidebar > button{
+  border: none;
+  background-color: white;
 }
 
 .sidebarRow {

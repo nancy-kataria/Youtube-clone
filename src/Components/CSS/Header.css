@@ -5,7 +5,7 @@
     justify-content: space-between;
     padding: 10px;
     background-color: white;
-    position: sticky;
+    position: sticky fixed;
     top: 0;
     z-index: 100;
   }
@@ -19,13 +19,13 @@
     display: flex;
     align-items: center;
   }
-  
+/*   
   .header-left > h2{
     font-family: 'Cairo', sans-serif;
     font-size: 22px;
     font-weight: 600;
   }
-  
+   */
   .header-logo{
     height: 25px;
     object-fit: contain;
@@ -44,6 +44,16 @@
     border: none;
     padding: 9px 2px;
   }
+
+  .search-results{
+    border: none;
+    padding: 9px 2px;
+  }
+
+  /* .filters{
+    border: none;
+    background-color: white;
+  } */
   
   .header-input-button{
     width: 50px !important; /* to over-write the material-ui css */

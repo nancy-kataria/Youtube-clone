@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CSS/Header.css";
 import MenuIcon from "@material-ui/icons/MenuSharp";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,9 +7,26 @@ import AppsIcon from "@material-ui/icons/AppsOutlined";
 import NotificationIcon from "@material-ui/icons/NotificationsOutlined";
 import AvatarIcon from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Header({ isCollapsed, setIsCollapsed }) {
+  const [posts, setPosts] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
   const [inputSearch, setInputSearch] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
+      )
+      .then((res) => {
+        setPosts(res.data.items);
+        setFilteredData(res.data.items);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const menuHandler = () => {
     if (!isCollapsed) {
@@ -20,7 +37,16 @@ function Header({ isCollapsed, setIsCollapsed }) {
   };
 
   const inputSearchHandler = (e) => {
-    setInputSearch(e.target.value);
+    const value = e.target.value.toLowerCase();
+    const search = filteredData.filter((data) =>
+      `${data.snippet.channelTitle}`.toLowerCase().includes(value)
+    );
+
+    // if (value !== "") {
+    //   setPosts(search);
+    // }
+    setPosts(search);
+    setInputSearch(value);
   };
 
   return (
@@ -32,22 +58,32 @@ function Header({ isCollapsed, setIsCollapsed }) {
         <Link to="/">
           <img
             className="header-logo"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
             alt="Youtube-logo"
           />
         </Link>
-        <h2>YouTube</h2>
       </div>
       <div className="header-input">
         <input
-          onChange={inputSearchHandler}
-          value={inputSearch}
+          onInput={inputSearchHandler}
           placeholder="Search"
           type="text"
         />
-      <Link to={`/search/${inputSearch}`}>
-        <SearchIcon className="header-input-button" />
-      </Link>  
+        <Link to={`/search/${inputSearch}`}>
+          <SearchIcon className="header-input-button" />
+        </Link>
+        {(!inputSearch) ? ""
+       : (
+        <div className="search-list">
+          <ul>
+            {posts.slice(0,10).map((filter) => (
+              <Link to={`/search/${filter.snippet.channelTitle}`} key={Math.random()}>
+                <li className="filters">{filter.snippet.channelTitle}</li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      )}
       </div>
       <div className="header-icons">
         <VideoCallIcon className="header-icon" />

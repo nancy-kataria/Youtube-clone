@@ -146,13 +146,12 @@
 
 .suggestion-videos{
     display: flex;
-    justify-content: space-between;
     padding-bottom: 8px;
 }
 
-.suggestion-videos > img{
-    height: 6rem;
-    width: 11rem;
+.suggestion-videos .Svideo-image{
+    height: 94px;
+    width: 168px;
     padding-right: 6px;
 }
 

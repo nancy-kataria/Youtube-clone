@@ -1,0 +1,35 @@
+.search-box{
+    margin: 20px 20px;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
+    cursor: pointer;
+    color: black;
+  }
+
+ul{
+    list-style-type: none;
+    padding-inline-start: 0 !important;
+}
+
+input{
+    flex: 1;
+    border: none;
+    padding: 9px 2px;
+}
+
+/* .filters{
+    background-color: chartreuse;
+} */
+
+.search-list{
+    z-index: 11;
+    border: 2px solid;
+    border-color: #fafafa;
+    position: 'absolute';
+    top: 60;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+.playlist-page{
+    display: flex;
+    background-color: #f9f9f9;
+    padding: 1.5rem 1.5rem;
+}
+
+.playlist{
+    flex: 0.3;
+}
+
+.playlist > img{
+    width: 312px;
+    height: 175px;
+}
+
+.playlist-name{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+}
+
+.playlist-description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-videos{
+    flex: 0.7;
+    background-color: #e0e0e0;
+    overflow: scroll;
+}
+
+.playlist-video-row{
+    display: flex;
+    padding-bottom: 12px;
+}
+
+.playlist-video-row > img{
+    height: 4.5rem;
+    width: 7rem;
+}
