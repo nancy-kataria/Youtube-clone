@@ -129,7 +129,7 @@ function HomePage() {
           <SidebarMin />
         )}
         <Routes>
-          <Route path="/" element={<Home isCollapsed={isCollapsed} />} />
+          <Route path="/youtube-clone" element={<Home isCollapsed={isCollapsed} />} />
           <Route
             path="/search/:searchTerm"
             element={
