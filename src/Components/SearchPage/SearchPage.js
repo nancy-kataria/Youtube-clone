@@ -47,7 +47,7 @@ function SearchPage({ isCollapsed, pathName }) {
       /> */}
       <hr />
       {posts.map((post) => ( // to render all the videos in the items array
-        <Link to = {`/youtube-clone/video/${post.id.videoId}`} key={Math.random()}>
+        <Link to = {`/video/${post.id.videoId}`} key={Math.random()}>
           <VideoRow
           views="3M"
           description={post.snippet.description}

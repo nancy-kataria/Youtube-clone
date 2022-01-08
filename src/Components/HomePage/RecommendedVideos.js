@@ -30,7 +30,7 @@ function RecommendedVideos({ isCollapsed }) {
     <div className={!isCollapsed ? "recommendedVideos" : "recommended-Videos"}> 
       <div className="recommended-videos">
         {posts.map((post) => (
-          <Link to={`/youtube-clone/video/${post.id}`} key={Math.random()} 
+          <Link to={`/video/${post.id}`} key={Math.random()} 
            >
             <VideoCard
               isCollapsed={isCollapsed}

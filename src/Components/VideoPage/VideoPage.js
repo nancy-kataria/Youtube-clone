@@ -61,7 +61,7 @@ function VideoPage({
           type="text/html"
           width="950"
           height="530"
-          src={`http://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
+          src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=http://example.com`}
           frameBorder="0"
           title="myFrame"
         ></iframe>

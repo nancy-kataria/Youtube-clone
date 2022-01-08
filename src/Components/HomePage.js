@@ -129,15 +129,15 @@ function HomePage() {
           <SidebarMin />
         )}
         <Routes>
-          <Route path="/youtube-clone" element={<Home isCollapsed={isCollapsed} />} />
+          <Route path="/" element={<Home isCollapsed={isCollapsed} />} />
           <Route
-            path="/youtube-clone/search/:searchTerm"
+            path="/search/:searchTerm"
             element={
               <SearchPage isCollapsed={isCollapsed} pathName={pathName} />
             }
           />
           <Route
-            path="/youtube-clone/video/:videoTerm"
+            path="/video/:videoTerm"
             element={
               <VideoPage
                 videoImage={videoImage}
@@ -150,8 +150,8 @@ function HomePage() {
               />
             }
           />
-          <Route path='/youtube-clone/playlist' element={<PlaylistPage />} />
-          <Route path='/youtube-clone/fetch' element={<FetchTest />} />
+          <Route path='/playlist' element={<PlaylistPage />} />
+          <Route path='/fetch' element={<FetchTest />} />
         </Routes>
       </div>
     </div>
