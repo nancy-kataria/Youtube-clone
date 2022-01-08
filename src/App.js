@@ -1,6 +1,6 @@
 import "./App.css";
 import {
-  BrowserRouter as Router
+  HashRouter as Router
 } from "react-router-dom";
 import HomePage from "./Components/HomePage";
 
