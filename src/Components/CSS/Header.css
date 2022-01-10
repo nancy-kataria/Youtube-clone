@@ -52,7 +52,7 @@
 
 .search-list li{
   list-style-type: none;
-  padding: 10px 10px 2px;
+  padding: 10px 10px 4px;
 }
 
 .search-list li:hover{

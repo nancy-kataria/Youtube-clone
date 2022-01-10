@@ -10,7 +10,6 @@ import SearchPage from "./SearchPage/SearchPage";
 import VideoPage from "./VideoPage/VideoPage";
 import HideSideBar from "./SideBar/HideSideBar";
 import PlaylistPage from "./PlaylistPage/PlaylistPage";
-import FetchTest from "./FetchTest";
 
 function HomePage() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -151,7 +150,6 @@ function HomePage() {
             }
           />
           <Route path='/playlist' element={<PlaylistPage />} />
-          <Route path='/fetch' element={<FetchTest />} />
         </Routes>
       </div>
     </div>
