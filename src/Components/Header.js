@@ -39,7 +39,7 @@ function Header({ isCollapsed, setIsCollapsed }) {
   const inputSearchHandler = (e) => {
     const value = e.target.value.toLowerCase();
     const search = filteredData.filter((data) =>
-      `${data.snippet.channelTitle}`.split("")[0].toLowerCase().includes(value)
+      `${data.snippet.channelTitle}`.split(' ')[0].toLowerCase().includes(value)
     );
 
     // if (value !== "") {
