@@ -36,18 +36,24 @@
 }
 
 .header-input .search-box > input {
+  width: 100%;
   border: none;
   padding: 9px 2px;
+  outline: none;
 }
 
 .header-input .search-list {
   position: absolute;
-  top: 49px;
+  top: 47px;
   left: 498px;
   width: 28%;
   background-color: #fff;
   border-top: 1px solid #ccc;
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+ul{
+  padding-inline-start: 0 !important;
 }
 
 .search-list li{
@@ -75,4 +81,10 @@
 
 .header-icon {
   margin-right: 10px;
+}
+
+a:-webkit-any-link {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: black;
 }

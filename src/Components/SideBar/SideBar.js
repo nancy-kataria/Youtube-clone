@@ -13,7 +13,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMoreOutlined";
 import { Link } from "react-router-dom";
 import ExpandSidebar from "./ExpandSidebar";
 
-function SideBar({pathName}) {
+function SideBar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const expandMoreSideBarHandler = () => {
