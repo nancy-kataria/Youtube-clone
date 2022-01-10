@@ -11,7 +11,7 @@ function RecommendedVideos({ isCollapsed }) {
     const getRecommendedVideos = () => { // Home page Recommended Videos API
       axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
+        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=28&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
       )
       .then((res) => {
         // console.log(res);

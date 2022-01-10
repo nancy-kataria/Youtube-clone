@@ -1,73 +1,78 @@
 /* Header */
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: white;
-    position: sticky fixed;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .header-left > button{
-    border: none;
-    background-color: white;
-  }
-  
-  .header-left{
-    display: flex;
-    align-items: center;
-  }
-/*   
-  .header-left > h2{
-    font-family: 'Cairo', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-  }
-   */
-  .header-logo{
-    height: 25px;
-    object-fit: contain;
-    margin-left: 10px;
-  }
-  
-  .header-input{
-    display: flex;
-    align-items: center;
-    width: 40%;
-    border: 1px solid lightgray;
-  }
-  
-  .header-input > input{
-    flex: 1;
-    border: none;
-    padding: 9px 2px;
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 2.5rem;
+}
 
-  .search-results{
-    border: none;
-    padding: 9px 2px;
-  }
+.header-left > button {
+  border: none;
+  background-color: white;
+}
 
-  /* .filters{
-    border: none;
-    background-color: white;
-  } */
-  
-  .header-input-button{
-    width: 50px !important; /* to over-write the material-ui css */
-    background-color: #fafafa;
-    border-left: 1px solid lightgray;
-    color: black;
-  }
-  
-  .header-icons{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .header-icon{
-    margin-right: 10px;
-  }
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 25px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+
+.header-input .search-box {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  border: 1px solid lightgray;
+  flex-grow: 1;
+}
+
+.header-input .search-box > input {
+  border: none;
+  padding: 9px 2px;
+}
+
+.header-input .search-list {
+  position: absolute;
+  top: 49px;
+  left: 498px;
+  width: 28%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-list li{
+  list-style-type: none;
+  padding: 10px 10px 2px;
+}
+
+.search-list li:hover{
+  cursor: pointer;
+  background-color: #ededed;
+}
+
+.header-input-button {
+  width: 50px !important; /* to over-write the material-ui css */
+  background-color: #fafafa;
+  border-left: 1px solid lightgray;
+  color: black;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-icon {
+  margin-right: 10px;
+}

@@ -17,7 +17,7 @@ function Header({ isCollapsed, setIsCollapsed }) {
   useEffect(() => {
     axios
       .get(
-        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
+        "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=500&key=AIzaSyCt9Ppy3QEsZcJlyFvzUp-p4-13bmNIvXk"
       )
       .then((res) => {
         setPosts(res.data.items);
@@ -39,7 +39,7 @@ function Header({ isCollapsed, setIsCollapsed }) {
   const inputSearchHandler = (e) => {
     const value = e.target.value.toLowerCase();
     const search = filteredData.filter((data) =>
-      `${data.snippet.channelTitle}`.toLowerCase().includes(value)
+      `${data.snippet.channelTitle}`.split("")[0].toLowerCase().includes(value)
     );
 
     // if (value !== "") {
@@ -64,26 +64,27 @@ function Header({ isCollapsed, setIsCollapsed }) {
         </Link>
       </div>
       <div className="header-input">
-        <input
-          onInput={inputSearchHandler}
-          placeholder="Search"
-          type="text"
-        />
-        <Link to={`/search/${inputSearch}`}>
-          <SearchIcon className="header-input-button" />
-        </Link>
-        {(!inputSearch) ? ""
-       : (
-        <div className="search-list">
-          <ul>
-            {posts.slice(0,10).map((filter) => (
+        <div className="search-box">
+          <input
+            onInput={inputSearchHandler}
+            placeholder="Search"
+            type="text"
+          />
+          <Link to={`/search/${inputSearch}`}>
+            <SearchIcon className="header-input-button" />
+          </Link>
+        </div>
+        {!inputSearch ? (
+          ""
+        ) : (
+          <ul className="search-list">
+            {posts.slice(0, 10).map((filter) => (
               <Link to={`/search/${filter.snippet.channelTitle}`} key={Math.random()}>
-                <li className="filters">{filter.snippet.channelTitle}</li>
+                <li>{filter.snippet.channelTitle}</li>
               </Link>
             ))}
           </ul>
-        </div>
-      )}
+        )}
       </div>
       <div className="header-icons">
         <VideoCallIcon className="header-icon" />

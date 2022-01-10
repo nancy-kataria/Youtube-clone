@@ -38,7 +38,7 @@ function FetchTest() {
   };
 
   return (
-    <div className="search-box">
+    <div className="test-container">
       {/* <ul>{
                     posts.map(post => (<li key={Math.random()}>{post.snippet.title}</li>))
                     // posts.items.forEach(item => {
@@ -46,49 +46,31 @@ function FetchTest() {
                     // })
                 }
             </ul> */}
-      <input onInput={inputSearchHandler} placeholder="Search" type="text" />
-      <Link to={`/search/${inputSearch}`}>
-        <SearchIcon className="header-input-button" />
-      </Link>
-      {(!inputSearch) ? ""
-       : (
-        <div className="search-list">
-          <ul>
-            {posts.slice(0,10).map((filter) => (
-              <Link to={`/search/${filter.snippet.channelTitle}`} key={Math.random()}>
-                <li className="filters">{filter.snippet.channelTitle}</li>
-              </Link>
-            ))}
-          </ul>
+      <div className="top-header">
+        <div className="search-box">
+          <input
+            onInput={inputSearchHandler}
+            placeholder="Search"
+            type="text"
+          />
+          <Link to={`/search/${inputSearch}`}>
+            <SearchIcon className="header-input-button" />
+          </Link>
         </div>
-      )}
-      <div className="random">
-      <ul>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-          <li>Random Stuff</li>
-      </ul>
+        {/* {!inputSearch ? (
+          ""
+        ) : ( */}
+            <ul className="search-list">
+              {posts.slice(0, 10).map((filter) => (
+                <Link
+                  to={`/search/${filter.snippet.channelTitle}`}
+                  key={Math.random()}
+                >
+                  <li className="filters">{filter.snippet.channelTitle}</li>
+                </Link>
+              ))}
+            </ul>
+        {/* )} */}
       </div>
     </div>
   );
